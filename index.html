@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>JAVA WEB</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+<!-- ################# MY CUSTOM FILES ################# -->
+  <!-- Estilo da tabela do JDK -->
+  <link rel="stylesheet" media="screen" href="css/jdk_style.css">
+  <!-- Minha customizacao de CSS -->
+  <link rel="stylesheet" media="screen" href="css/style.css">
+<!-- ################# MY CUSTOM FILES ################# -->
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/neon.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/vertical-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+
+<!-- ################# MY CUSTOM FILES ################# -->
+  <link rel="stylesheet" media="screen" href="css/table-style.css">
+<!-- ################# MY CUSTOM FILES ################# -->
+
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    <!-- ================= AULA 001 ================== -->
+    <section class="slide" id="cover">
+        <h1><span id="main_title">Java para Web</span></h1>
+    </section>
+    <!-- Revisão e avaliação de conhecimento de Java -->
+
+    <!-- ================= AULA 002 ================== -->
+    <section class="slide" id="html5">
+        <h2>HTML 5</h2>
+        <p>
+            <span class="highlight">H</span>yper<span class="highlight">t</span>ext <span class="highlight">M</span>arkup <span class="highlight">L</span>anguage é a <strong>linguagem de marcação</strong> padrão para a criação de páginas Web e aplicações Web.
+            <br />
+            <br />
+            Hipertexto é um texto com propriedade de conter referências (hyperlinks) para outros documentos ou para dentro de si próprio.
+            <br />
+            <br />
+            O HTML é responsável por estruturar uma página Web através de <a href="#tag">tags</a> que podem ou não conter <a href="#tag-attribute">atributos</a>.
+            <br />
+            <br />
+            Cada documento HTML deve conter um <a href="#doctype">!DOCTYPE</a>.
+        </p>
+        <br/>
+        <p>
+            Observações importantes:
+        </p>
+        <ul>
+            <li>HTML NÃO é uma linguagem de programação</li>
+            <li>Tags com letras minúsculas SEMPRE, por favor!</li>
+            <li>Abriu uma Tag? Feche-a!</li>
+        </ul>
+        <a href="https://validator.w3.org/nu/#textarea">Validador HTML</a>
+    </section>
+
+    
+
+    <section class="slide" id="tag">
+        <h2>Tags</h2>
+        <p>
+            Tags são símbolos textuais que, ao serem interpretados por softwares preparados, influenciam na estruturação e (às vezes) renderização da página Web. Elas servem para marcar partes de um documento e lhes conferir alguma propriedade.
+            Podem possuir <a href="#tag-attribute">atributos</a> que alteram seu comportamento e para utilizá-las basta colocar o texto desejado entre a tag de abertura e fechamento. 
+            <br />
+            OBS.: É possível colocar tags dentro de outras tags.
+        </p>
+        <p>Abertura</p>
+        <pre>
+            &lt;div&gt;
+            &lt;p&gt;
+            &lt;h1&gt;
+        </pre>
+        <p>Fechamento</p>
+        <pre>
+            &lt;/div&gt;
+            &lt;/p&gt;
+            &lt;/h1&gt;
+        </pre>
+        <p>
+            É possível fechar uma tag de abertura quando não se deseja colocar algum conteúdo nelas. São chamadas "self-closing tags".
+        </p>
+        <pre>
+            &lt;img /&gt;
+            &lt;br /&gt;
+        </pre>
+        <a href="#html5">Voltar</a>
+    </section>
+
+    <section class="slide" id="tag-attribute">
+        <h2>Atributos de tag</h2>
+        <p>
+            Às vezes o comportamento padrão de uma tag não é exatamente o que desejamos, portanto, podemos usar o recurso de atributos que o HTML nos disponibiliza para podermos adequar melhor nosso documento ao que queremos
+            É importante reparar que os atributos também devem ser escritos em letras minúsculas (iguais às tags) e seu valor deve estar entre aspas duplas e separados por espaços (em caso de mais de um atributo).
+        </p>
+        <p>
+            Atributos comuns:
+        </p>
+        <ul>
+            <li>
+                id - permite colocar um identificador para aquela tag. IDs devem ser ÚNICOS por documento!
+                class - permite associar uma tag a um ou mais grupos semânticos, portanto, a classe pode e DEVE ser repetida através do documento.
+                alt - exibe uma descrição sobre o texto marcado.
+            </li>
+        </ul>
+        <p>
+            Exemplos de Notação:
+        </p>
+        <pre>
+            &lt;span class="highlight"&gt;
+            &lt;p alt="Descrição"&gt;
+            &lt;h1 id="titulo-trabalho"&gt;
+        </pre>
+        <a href="#html5">Voltar</a>
+    </section>
+
+    <section class="slide" id="doctype">
+        <h2>DOCTYPE</h2>
+        <p>
+            Deve ser a primeira coisa a ser declarada num documento HTML. Ele é uma instrução para o navegador saber qual a versão do HTML a página usa.
+        </p>
+        <p>
+            Exemplos de DOCTYPE:
+        </p>
+        <ul>
+            <li>HTML 5 = <!DOCTYPE html></li>
+            <li>HTML 4.01 Strict = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"></li>
+            <li>HTML 4.01 Transitional = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></li>
+            <li>HTML 4.01 Frameset = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"></li>
+        </ul>
+        <p>
+            Existe a variante XHTML, que é o HTML com validação XML, o que torna o documento menos flexível, porém mais legível e sensível a falhas.
+        </p>
+        <a href="#html5">Voltar</a>
+    </section>
+
+
+    <section class="slide" id="the-end">
+        <h1>Fim</h1>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/********************************************
+                URL TABLE
+*********************************************/
+#url-table {
+    border-spacing: 10px;
+    border-collapse: separate;
+    color: #000;
+    text-align: center;
+}
+
+#url-table > thead > tr > th {
+    padding: 10px;
+}
+
+#url-table > tbody > tr > td {
+    padding: 10px;
+}
+
+/*-------- Table Header ----------*/
+.scheme {
+    background-color: #CC0000;
+}
+
+.abs-root {
+    background-color: #CC7F00;
+}
+
+.sub-dom {
+    background-color: #CCCC00;
+}
+
+.dom {
+    background-color: #00CC00;
+}
+
+.top-lvl-dom {
+    background-color: #0000CC;
+}
+
+.port {
+    background-color: #4B0070;
+}
+
+.path {
+    background-color: #7000D3;
+}
+
+.query-str {
+    background-color: #AAA;
+}
+
+.frag-id {
+    background-color: #EEE;
+}
+/*-------- Table Data ----------*/
+.scheme-dt {
+    background-color: #FF0000;
+}
+
+.abs-root-dt {
+    background-color: #FF7F00;
+}
+
+.sub-dom-dt {
+    background-color: #FFFF00;
+}
+.dom-dt {
+    background-color: #00FF00;
+}
+
+.top-lvl-dom-dt {
+    background-color: #0000FF;
+}
+
+.port-dt {
+    background-color: #4B0082;
+}
+
+.path-dt {
+    background-color: #9400D3;
+}
+
+.query-str-dt {
+    background-color: #CCC;
+}
+
+.frag-id-dt {
+    background-color: #FFF;
+}
+
+/*...........................................
+                URL TABLE
+............................................*/
