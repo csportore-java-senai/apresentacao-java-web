@@ -78,7 +78,502 @@
         <a href="https://validator.w3.org/nu/#textarea">Validador HTML</a>
     </section>
 
-    
+    <!-- ================= AULA 003 ================== -->
+    <section class="slide" id="css">
+        <h2>CSS 3</h2>
+        <p>
+            <span class="highlight">C</span>ascading <span class="highlight">S</span>tyle<span class="highlight">s</span>heet é uma linguagem de folha de estilo usada para descrever a aparência de um documento como o HTML utilizando <a href="#css-selector">seletores</a>
+            e <a href="#pseudo-element">pseudo-elementos</a> e <a href="#pseudo-class">pseudo-classes</a>.
+            Antigamente, a estilização de uma página ficava junto com o HTML, o que hoje em dia não é considerado boa prática. O CSS adota a maior parte das estilizações antigas e expande-a muito mais!
+        </p>
+        <p>
+            Este é o "box-model" que o CSS usa para estilizar os elementos de uma página:
+        </p>
+        <img src="img/css/box-model.png" width="20%" height="20%"/>
+        <p>
+            Existem 3 formas de utilizar o CSS: Inline, Interna e Externa. São explicadas no slide a seguir.
+        </p>
+    </section>
+
+    <section class="slide" id="css-usage">
+        <h2>Formas de usar sua folha de estilo CSS 3</h2>
+        <section class="slide" id="inline">
+            <h3>Inline</h3>
+            <pre>
+                &lt;p style="color: red; margin-top:10px;"&gt; 
+            </pre>
+        </section>
+        <section class="slide" id="internal">
+            <h3>Interna</h3>
+            <pre>
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;style&gt;
+                            body {
+                                background-color: blue;
+                            }
+                            
+                            h1 {
+                                color: black;
+                                margin-left: 10px;
+                            } 
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                ...
+            </pre>
+        </section>
+        <section class="slide" id="external">
+            <h3>Externa</h3>
+            <pre>
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+                ...
+            </pre>
+        </section>
+        <section class="slide" id="more-css">
+        <p>Leia mais:</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">Shorthand properties</a>
+        </section>
+    </section>
+
+    <!-- ================= AULA 004 ================== -->
+    <section class="slide" id="javascript">
+        <h2>JavaScript</h2>
+        <p>
+            JavaScript é uma linguagem de programação de alto-nível, interpretada, dinâmica* e fracamente tipada. Ela faz parte do trio fundamental da Web.
+            Ela suporta diversos tipos de paradigmas de programação como: orientada a eventos, funcional e imperativo (até orientada a objeto).
+        </p>
+        <p>
+            Suas funções principais são manipular o DOM e adicionar "inteligência" às páginas Web.
+        </p>
+        <p>
+            Java e JavaScript são MUITO diferentes! Por exemplo:
+        </p>
+        <ul>
+            <li>Java tem tipagem estática enquanto o JS é dinâmico</li>
+            <li>No JS declaramos variáveis com "var", "let" e "const"</li>
+            <li>O JS não precisa ser compilado por nós antes de ser executado</li>
+            <li>JS não tem suporte para Multithread</li>
+        </ul>
+        <p>
+            * realiza em tempo de execução o que as estáticas realizam em tempo de compilação.
+        </p>
+        
+    </section>
+
+    <section class="slide" id="dom">
+        <h2>DOM</h2>
+        <p>
+            É uma <a href="#api">API</a> multiplataforma, independente de linguagem que trata o HTML, XHTML ou XML como uma estrutura em árvore onde cada nó é um objeto que representa uma parte do documento.
+            Esses objetos podem ser manipulados programaticamente atráves do JavaScript.
+        </p>
+        <img src="img/dom/html_dom.jpg"/>
+    </section>
+            
+    <!-- ================= AULA 005 ================== -->
+    <section class="slide" id="url">
+        <h2>Fundamentos para Web</h2>
+        <section class="slide" id="url">
+            <h3> URL </h3>
+            <p>
+                <span class="highlight">U</span>niform <span class="highlight">R</span>esource <span class="highlight">L</span>ocator é a informação que combina o meio para se localizar um determinado recurso e a maneira de obtê-lo.<br />
+                Exemplo: Uma URL de página da web. Ela é divida da seguinte forma:
+            </p>
+            <table id="url-table">
+                <thead>
+                    <tr>
+                        <th class="scheme">
+                            Scheme
+                        </th>
+                        <th class="abs-root">
+                            Absolute Root
+                        </th>
+                        <th class="sub-dom">
+                            Subdomain
+                        </th>
+                        <th class="dom">
+                            Domain
+                        </th>
+                        <th class="top-lvl-dom">
+                            Top-level Domain
+                        </th>
+                        <th class="port">
+                            Port
+                        </th>
+                        <th class="path">
+                            Path
+                        </th>
+                        <th class="query-str">
+                            Query String
+                        </th>    
+                        <th class="frag-id"> 
+                            Fragment identifier
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="scheme-dt">
+                            https:
+                        </td>
+                        <td class="abs-root-dt">
+                            //
+                        </td>
+                        <td class="sub-dom-dt">
+                            www.
+                        </td>
+                        <td class="dom-dt">
+                            facebook
+                        </td>
+                        <td class="top-lvl-dom-dt">
+                            .com
+                        </td>
+                        <td class="port-dt">
+                            :443
+                        </td>
+                        <td class="path-dt">
+                            /index.html
+                        </td>
+                        <td class="query-str-dt">
+                            id=123
+                        </td>
+                        <td class="frag-id-dt">
+                            #friends
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slide" id="scheme">
+            <h3> Scheme </h3>
+            <p>
+               
+                Schemes são formas de uma URL identificar qual é o protocolo a ser utilizado para se obter um recurso. Exemplos:
+            </p>
+            <p>
+                http, https, ftp, iiop, etc.
+            </p>
+        </section>
+    </section>
+
+    <section class="slide" id="url-parts1">
+        <h2>Fundamentos para Web</h2>
+        <section class="slide" id="abs-root">
+            <h3> Absolute root </h3>
+            <p>
+                
+                É a raiz do diretório da URL em sua forma <strong>absoluta</strong>. Isso quer dizer que a descrição do diretório deve partir da raiz determinada pela instalação do seu sistema operacional.
+                Ele oferece um "guia" passo-a-passo de como chegar a um determinado arquivo ou diretório. Por exemplo:
+            </p>
+            <pre>
+                C:\Program Files\Java\jdk1.8.0_172
+            </pre>
+            <br />
+            <p>
+                Já uma URL <a href="#relative-paths">relativa</a> pode variar conforme a localização do diretório usado como referência (working directory). Este tipo é mais flexível, e serve para que diretórios possam ser transportados ou usados
+                em outros lugares sem que seja necessário alguma intervenção no código. Por exemplo:
+            </p>
+            <pre>
+                documentos/impressoes/boleto.pdf
+            </pre>
+        </section>
+    </section>
+
+    <section class="slide" id="url-parts2">
+        <h2>Fundamentos de Web</h2>
+        <section class="slide" id="subdomain">
+            <h3>
+                Subdomain (Subdomínio)
+            </h3>
+            <p>
+               
+                É um domínio que pertence a outro domínio maior. O que é geralmente "www" pode ser "www1", "developers", "mail", etc. 
+                <br />
+                Exemplos:
+            </p>
+            <ul>
+                <li>https://en.wikipedia.org</li>
+                <li>https://web.whatsapp.com/</li>
+                <li>https://signup.heroku.com/</li>
+                <li>https://senai-java.slack.com</li>
+                <li>https://developers.google.com</li>
+            </ul>
+        </section>
+        <section class="slide" id="domain">
+            <h3>
+                Domain (Domínio)
+            </h3>
+            <p>
+                
+                Domínios são usados para identificar um ou mais endereços de IP de uma forma mais facilmente lembrada por um ser humano. Exemplos:
+            </p>
+            <ul>
+                <li>www.google.com - 172.217.30.36</li>
+                <li>www.facebook.com - 31.13.85.38</li>
+                <li>www.wikipedia.org - 208.80.154.224</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="slide" id="url-parts3">
+        <h2>Fundamentos de Web</h2>
+        <section class="slide" id="top-level-domain">
+            <h3>
+
+                Top-level domain (Domínio de topo)
+            </h3>
+            <p>
+                Ocupa o lugar mais alto na hierarquia de domínios. A maior parte destes são previamente estabelecidos por órgãos específicos, escolhidos pelo <a href="https://en.wikipedia.org/wiki/ICANN">ICANN</a> (Internet Corporation for Assigned Names and Numbers).
+                <br />
+                Exemplos:
+            </p>
+            <ul><li><a href="/wiki/Country-code_top-level_domain" class="mw-redirect" title="Country-code top-level domain">country-code top-level domains</a> (ccTLD)</li>
+                <li><a href="/wiki/Generic_top-level_domain" title="Generic top-level domain">generic top-level domains</a> (gTLD)
+                    <ul>
+                        <li><a href="/wiki/Sponsored_top-level_domains" class="mw-redirect" title="Sponsored top-level domains">sponsored top-level domains</a> (sTLD)</li>
+                        <li><a href="/wiki/Unsponsored_top-level_domains" class="mw-redirect" title="Unsponsored top-level domains">unsponsored top-level domains</a></li>
+                    </ul>
+                </li>
+                <li><a href="/wiki/Top-level_domain#Infrastructure_domain" title="Top-level domain">infrastructure top-level domain</a> (<a href="/wiki/.arpa" title=".arpa">.arpa</a>)</li> 
+            </ul>
+        </section>
+    </section>
+
+    <section class="slide" id="url-parts4">
+
+        <h2>Fundamentos de Web</h2>
+        <section class="slide" id="ports">
+            <h3>Portas</h3>
+            <p>
+                Uma <strong>porta</strong> é a ponta final de uma comunicação (em redes de computadores). Tanto conexões físicas ou sem-fio são terminadas nas portas dos dispositivos de hardware. Já no software, uma porta é uma
+                construção lógica que identifica um processo ou tipo específico de serviço de rede. O número dela está sempre associado à um endereço IP e elas possuem identificação por protocolo que implementam (TCP ou UDP, geralmente).
+                <br />
+                Exemplos:
+            </p>
+            <ul><li>20: <a href="/wiki/File_Transfer_Protocol" title="File Transfer Protocol">File Transfer Protocol</a> (FTP) - Transferência de dados</li>
+                <li>21: <a href="/wiki/File_Transfer_Protocol" title="File Transfer Protocol">File Transfer Protocol</a> (FTP) - Controle de Comandos</li>
+                <li>22: <a href="/wiki/Secure_Shell" title="Secure Shell">Secure Shell</a> (SSH) - Login Seguro</li>
+                <li>23: <a href="/wiki/Telnet" title="Telnet">Telnet</a> - serviço de login remoto, mensagens sem criptografia</li>
+                <li>25: <a href="/wiki/Simple_Mail_Transfer_Protocol" title="Simple Mail Transfer Protocol">Simple Mail Transfer Protocol</a> (SMTP) - Roteamento de e-mails</li>
+                <li>53: <a href="/wiki/Domain_Name_System" title="Domain Name System">Domain Name System</a> (DNS) - Serviço de DNS</li>
+                <li>80: <a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">Hypertext Transfer Protocol</a> (HTTP) - usado na <a href="/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a></li>
+                <li>110: <a href="/wiki/Post_Office_Protocol" title="Post Office Protocol">Post Office Protocol</a> (POP3)</li>
+                <li>119: <a href="/wiki/Network_News_Transfer_Protocol" title="Network News Transfer Protocol">Network News Transfer Protocol</a> (NNTP)</li>
+                <li>123: <a href="/wiki/Network_Time_Protocol" title="Network Time Protocol">Network Time Protocol</a> (NTP)</li>
+                <li>143: <a href="/wiki/Internet_Message_Access_Protocol" title="Internet Message Access Protocol">Internet Message Access Protocol</a> (IMAP) - gerenciamento de correio digital</li>
+                <li>161: <a href="/wiki/Simple_Network_Management_Protocol" title="Simple Network Management Protocol">Simple Network Management Protocol</a> (SNMP)</li>
+                <li>194: <a href="/wiki/Internet_Relay_Chat" title="Internet Relay Chat">Internet Relay Chat</a> (IRC)</li>
+                <li>443: <a href="/wiki/HTTP_Secure" class="mw-redirect" title="HTTP Secure">HTTP Secure</a> (HTTPS) HTTP over TLS/SSL</li></ul>
+        </section>
+    </section>
+
+    <section class="slide" id="url-parts5">
+
+        <h2>Fundamentos de Web</h2>
+        <section class="slide" id="path">
+            <h3>Path (Caminho)</h3>
+            <p>
+                Um path representa o caminho definido por a sua aplicação para algum recurso dela já dentro do servidor web.
+                <br />
+                Exemplos:
+                <br /> 
+                http://brasil.campus-party.org/<span class="highlight">cprondonia/ingressos/</span>
+                <br />
+                https://www.vagalume.com.br/<span class="highlight">la-casa-de-papel/</span>bella-ciao.html
+            </p>
+        </section>
+        <section class="slide" id="query-str">
+
+            <h3>Query String</h3>
+            <p>
+                É parte da URL com dados que não se encaixam convenientemente na estrutura hierárquica do path (caminho). Normalmente, inclui informações adicionadas pelo navegador ou por alguma outra aplicação cliente como parte de um formulário HTML, por exemplo, e vem em formato chave/valor.
+                <br />
+                Exemplos:
+                <br />
+                https://vimeo.com/search?<span class="highlight">q=step+into+sensory+box</span>
+                <br />
+                https://www.buscape.com.br/search/aspirador-de-po?<span class="highlight">fromSearchBox=true&amp;produto=aspirador+de+p%C3%B3</span>
+            </p>
+        </section>
+        <section class="slide" id="frag-id">
+
+            <h3>Fragment Identifier</h3>
+            <p>
+                Um fragment identifier é uma sequencia de caracteres que representa um recurso subordinado a outro. No caso da Web, normalmente é um "id" de algum elemento dentro de uma página HTML.
+                <br />
+                Exemplo:
+                <br />
+                https://en.wikipedia.org/wiki/Fragment_identifier<span class="highlight">#Basics</span>
+            </p>
+        </section>
+
+    </section>
+
+    <section class="slide" id="http">
+
+        <h2>HTTP</h2>
+        <p>
+            Projeto iniciado em 1989 por <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>, o <span class="highlight">H</span>yper<span class="highlight">t</span>ext <span class="highlight">T</span>ransfer <span class="highlight">P</span>rotocol 
+            é um protocolo (conjunto de normas) para sistemas de informação de <a href="https://en.wikipedia.org/wiki/Hypermedia">hipermídia</a> (mídia não-linear), colaborativo (<a href="https://en.wikipedia.org/wiki/Request_for_Comments">RFCs</a>) e distribuído (várias plataformas, sem royalties).
+            Ele é a fundação da comunicação de informações na <a href="https://en.wikipedia.org/wiki/World_Wide_Web">World Wide Web</a>.
+            <br />
+            <br />
+            HTTP é o protocolo de troca ou transferência desses hipertextos. 
+            <br />
+            <br />
+            A primeira definição (e a que ainda está em amplo uso) é a HTTP/1.1, que foi sucedida pela HTTP/2 (padronizada em 2015) e agora é suportada pelos maiores navegadores e servidores web usando <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> (Transport Layer Security).
+            <br />
+            <br />
+            Coordenando o desenvolvimento do protocolo está o <a href="https://www.ietf.org/">IETF</a> (Internet Engineering Task Force).
+            <br />
+            <br />
+
+            <strong>Leitura recomendada:</strong> <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a>
+        </p>
+
+    </section>
+    <section class="slide" id="http-methods">
+        <h2>Métodos HTTP</h2>
+        <h3>GET</h3>
+        <p>
+            Solicita uma representação de algum recurso específico (uma página web, por exemplo). Deve apenas retornar dados!
+        </p>
+        <h3>HEAD</h3>
+        <p>
+            Também solicita uma resposta igual ao GET, mas somente seu cabeçalho.
+        </p>
+        <h3>POST</h3>
+        <p>
+            Normalmente, submete informações que podem alterar estado ou incluir dados do lado do servidor.
+        </p>
+        <h3>PATCH</h3>
+        <p>
+            Utilizado para realizar modificações parciais em um recurso.
+        </p>
+        <h3>PUT</h3>
+        <p>
+            Substitui totalmente um recurso por outro.
+        </p>
+        <h3>DELETE</h3>
+        <p>
+            Solicita o apagamento de algum recurso.
+        </p>
+    </section>
+
+    <section class="slide" id="http-anatomy">
+        <h2>Anatomia das requisições HTTP</h2>
+        <img src="img/http/http-diagram.png">
+    </section>
+
+    <section class="slide" id="request-response">
+        <h2>Requisição e Resposta (Request and Response)</h2>
+        <h3>Requisição</h3>
+        <pre>
+            GET /get
+            cache-control: no-cache
+            postman-token: 87fb7a84-9204-45a3-abb2-f45dabed5d2e
+            user-agent: PostmanRuntime/7.1.5
+            accept: */*
+            host: httpbin.org
+            accept-encoding: gzip, deflate
+        </pre>
+        <pre>
+            HTTP/1.1 200
+            status: 200
+            connection: keep-alive
+            server: gunicorn/19.9.0
+            date: Fri, 27 Jul 2018 21:00:43 GMT
+            content-type: application/json
+            content-length: 454
+            access-control-allow-origin: *
+            access-control-allow-credentials: true
+            via: 1.1 vegur
+            { "args": { "nome": "Teste" }, "headers": { "Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Cache-Control": "no-cache", "Connection": "close", "Content-Type": "application/x-www-form-urlencoded", "Host": "httpbin.org", "Postman-Token": "da68f1b9-12dc-4321-bb07-6c51cc6850d0", "User-Agent": "PostmanRuntime/7.1.5" }, "origin": "189.19.219.247", "url": "https://httpbin.org/get?nome=Teste" }
+        </pre>
+        <!-- Umas imagens de exemplo -->
+    </section>
+
+    <section class="slide" id="https">
+        <h2>HTTPS</h2>
+        <p>
+            HTTP Secure é uma extensão do HTTP para uma comunicação segura através de criptografia. A tecnologia empregada nessa criptografia era a SSL, que agora passa a ser depreciada frente à sua sucessora a TLS.
+        </p>
+        <img src="img/https/https.png"/>
+    </section>
+
+    <section class="slide" id="postman">
+        <!-- source https://www.youtube.com/watch?v=WZ9BkZVsUKY&index=3&list=PL6iUkDSEH9StfnjSTCsASTZbivezT18mW -->
+        <!-- TODO: Ler http://docs.wildfly.org/12/Getting_Started_Guide.html e http://docs.wildfly.org/12/ -->
+        <h2>Postman</h2>
+        <p>
+            Postman é uma ferramenta que auxilia o desenvolvimento e teste de APIs Web.
+        </p>
+        <img src="img/postman/postman.png">
+        <!-- Visualizar o resultado das requisições e construí-las manualmente -->
+        <!-- Mostrar como criar um servidor e os métodos GET, POST, PUT, DELETE e PATCH -->
+    </section>
+
+
+    <!-- ================================================================================================================================ -->
+    <!-- COMPLEMENTO  ==================================================================================================================== -->
+    <!-- ================================================================================================================================ -->
+    <section class="slide" id="relative-paths">
+        <h2>Relative Path</h2>
+        <p>Considere a seguinte estrutura:</p>
+        <pre>
+            /
+            |-> documentos
+                |-> projetos
+                |-> contas
+                    |-> pagas
+                    |-> nao_pagas
+                        |-> nao_pagarei
+            |-> fotos
+                |-> <span class="highlight">viagens</span> (este é seu working directory)
+                    |-> internacionais
+                        |-> da_hora
+                        |-> porcaria
+                    |-> nacionais
+                        |-> da_hora
+                        |-> porcaria
+                |-> familia
+                |-> comprometedoras
+            |-> videos 
+        </pre>
+        <section class="slide" id="relative-situation1">
+            <p>
+                Situação 1 - Acessar conteúdo no diretório <strong>/fotos/viagens/internacionais</strong>
+                <br />
+                Como o diretório alvo está dentro do CWD (current working directory, ou diretório de trabalho atual), basta se referir a ele como: <strong>internacionais</strong>
+            </p>
+        </section>
+        <section class="slide" id="relative-situation2">
+            <p>
+                Situação 2 - Acessar conteúdo no diretório <strong>/fotos/viagens/internacionais/porcaria</strong>
+                <br />
+                Como o diretório alvo está dentro de um subdiretório do CWD, basta se referir a ele como: <strong>internacionais/porcaria</strong>
+            </p>
+        </section>
+        <section class="slide" id="relative-situation3">
+            <p>
+                Situação 3 - Acessar conteúdo no diretório <strong>/fotos/familia</strong>
+                <br />
+                Agora o recurso está localizado no diretório pai. Como proceder? Para referenciar um diretório acima, usamos os "..", dessa forma: <strong>../familia</strong>
+            </p>
+        </section>
+        <section class="slide" id="relative-situation4">
+            <p>
+                Situação 4 - Acessar conteúdo no diretório <strong>/documentos/contas</strong>
+                <br />
+                Desgraça pouca é bobagem. Agora querem que você use um recurso em um local mais escondido. Sem problemas! Para acessar o diretório /documentos, basta usar a notação ".." duas vezes, dessa forma:
+                <strong>../../documentos/contas</strong>
+            </p>
+        </section>
+        <a href="#url-parts1">Voltar</a>
+    </section>
 
     <section class="slide" id="tag">
         <h2>Tags</h2>
@@ -154,9 +649,83 @@
         <p>
             Existe a variante XHTML, que é o HTML com validação XML, o que torna o documento menos flexível, porém mais legível e sensível a falhas.
         </p>
+        <!-- source https://www.w3schools.com/tags/tag_doctype.asp-->
         <a href="#html5">Voltar</a>
     </section>
 
+    <section class="slide" id="css-selector">
+        <h2>Seletores CSS</h2>
+        <p>
+            Um seletor CSS é um padrão de texto que serve para descrever qual(is) elemento(s) devem receber determinado estilo.
+        </p>
+        <p>Os mais comuns são:</p>
+        <pre>
+            body {
+                /* seleciona elemento */
+            }
+
+            #main {
+                /* seleciona id */
+            }
+
+            .quebravel {
+                /* seleciona classe */
+            }
+        </pre>
+        <a href="https://css-tricks.com/multiple-class-id-selectors/">Selecionando múltiplas classes</a>
+        <a href="https://www.w3schools.com/cssref/css_selectors.asp"> Referência e combinação dos seletores CSS</a>
+    </section>
+
+    <section class="slide" id="pseudo-element">
+        <h2>Pseudo-elementos</h2>
+        <p>
+            Eles estendem ainda mais o poder dos seletores CSS, direcionando os comandos de estilo para partes ainda mais específicas do(s) elemento(s) selecionado(s).
+        </p>
+        <p>
+            Exemplo:
+        </p>
+        <pre>
+            p::first-line {
+                ...
+            }
+        </pre>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Referência dos pseudo-elementos</a>
+    </section>
+
+    <section class="slide" id="pseudo-class">
+        <h2>Pseudo-classes</h2>
+        <p>
+            Assim como os pseudo-elementos, elas também servem para estender o poder de seleção dos seletores padrão do CSS. Só que as classes descrevem um estado especial do elemento.
+        </p>
+        <p>
+            Exemplo:
+        </p>
+        <pre>
+            a:hover{
+                ...
+            }
+        </pre>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Referência dos pseudo-classes</a>
+    </section>
+
+    <section class="slide" id="api">
+        <!-- source https://en.wikipedia.org/wiki/Application_programming_interface -->
+        <h2>O que é uma API?</h2>
+        <p>
+            Como uma GUI (Graphical user interface) torna mais fácil para um usuário utilizar um sistema ou parte dele, uma API (Application programming interface) serve para facilitar o uso de algumas tecnologias pelos desenvolvedores.
+            Uma API pode abstrair um funcionamento complexo para realizar tarefas como validações e cálculos em simples chamadas de métodos, aumentando a velocidade na produção de software. 
+        </p>
+    </section>
+    
+    <section class="slide" id="framework">
+        <h2>O que é um Framework?</h2>
+        <p>
+            Um Framework é uma abstração na qual um software oferece uma ou várias funcionalidades genéricas que podem ser modificadas por um desenvolvedor, tornando o que era genérico mais específico para as necessidades
+            do sistema. Ele provê uma maneira padrão de desenvolver alguns componentes bem comuns de um sistema, de modo a poupar o novo desenvolvedor de um trabalho repetitivo.
+        </p>
+    </section>
+
+    <!-- TODO colocar seção sobre Framework, Library, API e etc-->
 
     <section class="slide" id="the-end">
         <h1>Fim</h1>
